@@ -159,7 +159,24 @@ module.exports = {
           // in development "style" loader enables hot editing of CSS.
           {
             test: /\.css$/,
-            exclude: path.resolve(__dirname, "/bootstrap/dist/css/bootstrap.css/"),
+            use: [
+              'style-loader',
+              'css-loader?modules',
+              'postcss-loader'
+            ],
+            exclude: /node_modules/,
+          },
+          {
+            test: /\.css$/,
+            use: [
+              'style-loader',
+              'css-loader',
+              'postcss-loader'
+            ],
+            include: /node_modules/,
+          },
+          {
+            test: /\.scss$/,
             use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
               fallback: 'style-loader',
               use: [
@@ -167,27 +184,9 @@ module.exports = {
                   loader: 'css-loader',
                   options: {
                     modules: true,
-                    localIdentName: '[name]__[local]___[hash:base64:5]'
-                  }
-                },
-                'postcss-loader'
-              ]
-            }))
-          },
-          {
-            test: /\.scss$/,
-            exclude: path.resolve(__dirname, "/bootstrap/scss/bootstrap.scss/"),
-            
-            use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              use: [
-                {
-                  loader: 'css-loader',
-                  options: {
-                    modules: true,  
                     sourceMap: true,
                     importLoaders: 2,
-                    localIdentName: '[local]'
+                    localIdentName: '[name]__[local]___[hash:base64:5]'
                   }
                 },
                 'sass-loader'
