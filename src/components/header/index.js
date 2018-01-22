@@ -18,14 +18,14 @@ export default class Header extends React.Component {
         <Container className={Styles.wrapper}>
           <Row>
             <Col>
-              <Navbar color="faded" light expand="xs">
+              <Navbar expand="xs">
                 <Nav className="w-100 justify-content-between" navbar>
                   <NavItem >
-                    <NavLink tag={Link} to="/about">About</NavLink>
+                    <NavLink tag={Link} to="/about" className={Styles.nav_link}>About</NavLink>
                   </NavItem>
-                  <NavbarBrand tag={Link} to="/" className="mr-0">OE</NavbarBrand>
+                  <NavbarBrand tag={Link} to="/" className={Styles.nav_brand}>O G U Z</NavbarBrand>
                   <NavItem >
-                    <NavLink tag={Link} to="/">Search</NavLink>
+                    <NavLink tag={Link} to="/" className={Styles.nav_link}>Search </NavLink>
                   </NavItem>
                 </Nav>
               </Navbar>
