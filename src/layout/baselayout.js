@@ -5,7 +5,7 @@ import Content from '../routes';
 export default class BaseLayout extends React.Component {
   render() {
     return (
-      <div className="base-layout">
+      <div>
         <Header />
         <Content />
       </div>

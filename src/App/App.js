@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import BaseLayout from '../layout/baselayout';
 import { BrowserRouter as Router} from 'react-router-dom'
-import styles from './App.scss';
 
 class App extends Component {
 
@@ -34,7 +33,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className={["container",styles.App].join(' ')}>
+      <div>
         <Router>
           <BaseLayout />
         </Router>
