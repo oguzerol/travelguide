@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from '../slider/index';
 import Styles from './intro.scss';
 
 export default class Jumbotron extends React.Component {
@@ -8,7 +9,7 @@ export default class Jumbotron extends React.Component {
                 <video src={require('../../assets/video/jumbotron.mp4')} autoPlay muted loop className={Styles.video_wrapper} />
 
                 <div className={Styles.slider_wrapper}>
-                    <p> test </p>
+                    <Slider />
                 </div>
             </div>
         )
