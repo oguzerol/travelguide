@@ -11,7 +11,7 @@ export default class Jumbotron extends React.Component {
                 <div className={Styles.slider_wrapper}>
                     <Slider />
                 </div>
-            </div>
+            </div>  
         )
     }
 }
