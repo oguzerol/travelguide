@@ -7,7 +7,7 @@ export default class Jumbotron extends React.Component {
         return (
             <div className={Styles.wrapper}>
                 <video src={require('../../assets/video/videoplayback.webm')} autoPlay muted loop className={Styles.video_wrapper} />
-
+                <p className={Styles.text}> T R A V E L G U I D E </p>
                 <div className={Styles.slider_wrapper}>
                     <Slider />
                 </div>
