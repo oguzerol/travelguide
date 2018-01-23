@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BaseLayout from '../layout/baselayout';
-import { BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
 
@@ -33,11 +33,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Router>
-          <BaseLayout />
-        </Router>
-      </div>
+      <Router>
+        <BaseLayout />
+      </Router>
     );
   }
 }
