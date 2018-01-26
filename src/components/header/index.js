@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Navbar,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -22,7 +21,6 @@ export default class Header extends React.Component {
                 <NavItem >
                   <NavLink tag={Link} to="/about" className={Styles.nav_link}>About</NavLink>
                 </NavItem>
-                <NavbarBrand tag={Link} to="/" className={Styles.nav_brand}>O G U Z</NavbarBrand>
                 <NavItem >
                   <NavLink tag={Link} to="/" className={Styles.nav_link}>Search </NavLink>
                 </NavItem>
