@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   fetchSearchTopStories() {
-    fetch(`http://www.reddit.com/r/travel/top.json?limit=5`)
+    fetch(`https://www.reddit.com/r/travel/top.json?limit=5`)
       .then(response => response.json())
       .then(result => this.setSearchTopStories(result.data.children.map(obj => obj.data)))
       .catch(e => e);
