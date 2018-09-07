@@ -20,6 +20,7 @@ export default class Slider extends React.Component {
     componentDidMount() {
         this.sliderCont.fetchSearchTopStories().then(result => {
             this.setState({result});
+            console.log(result)
         });
     }
 
@@ -27,9 +28,9 @@ export default class Slider extends React.Component {
         return (
             <div className={Styles.item} key={item.id}>
                 <div className={Styles.content} >
-                    <img src={item.thumbnail} alt="text" />
+                    <img src={item.preview.images[0].source.url} alt="text" />
                     <div className={Styles.text_wrapper}>
-                        <p> test </p>
+                        <p>{item.title}</p>
                     </div>
                 </div>
             </div>
